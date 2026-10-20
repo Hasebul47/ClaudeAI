@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shop — Bloom &amp; Hobby</title>
+  <meta name="description" content="Browse ladies' accessories, special gift items and hobby supplies. Filter by category, price, rating and more.">
+  <meta name="theme-color" content="#b03a6f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23b03a6f'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white'>✿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="shop">
+  <div id="site-header"></div>
+
+  <main id="main" class="container">
+    <section class="page-head">
+      <nav class="crumbs" aria-label="Breadcrumb" id="crumbs"></nav>
+      <h1 id="shop-title">Shop all</h1>
+      <p id="shop-desc"></p>
+    </section>
+
+    <div class="shop">
+      <aside class="filters" id="drawer-filters" aria-label="Product filters">
+        <div class="filters__head">
+          <h2>Filters</h2>
+          <button class="icon-btn drawer__close" type="button" data-close aria-label="Close filters">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="filters__body">
+          <fieldset class="filter-group">
+            <legend class="sr-only">Category</legend>
+            <h3 aria-hidden="true">Category</h3>
+            <div id="f-cats"></div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="sr-only">Type</legend>
+            <h3 aria-hidden="true">Type</h3>
+            <div id="f-subs"></div>
+          </fieldset>
+          <div class="filter-group">
+            <h3>Price</h3>
+            <div class="price-inputs">
+              <label class="sr-only" for="f-min">Minimum price</label>
+              <input class="input" id="f-min" type="number" inputmode="numeric" min="0" placeholder="Min">
+              <span class="muted" aria-hidden="true">–</span>
+              <label class="sr-only" for="f-max">Maximum price</label>
+              <input class="input" id="f-max" type="number" inputmode="numeric" min="0" placeholder="Max">
+            </div>
+          </div>
+          <fieldset class="filter-group">
+            <legend class="sr-only">Customer rating</legend>
+            <h3 aria-hidden="true">Customer rating</h3>
+            <label class="check"><input type="radio" name="rating" value="0" checked> Any rating</label>
+            <label class="check"><input type="radio" name="rating" value="4.5"> <span class="stars" style="--rating:4.5" aria-hidden="true"></span> 4.5 &amp; up</label>
+            <label class="check"><input type="radio" name="rating" value="4"> <span class="stars" style="--rating:4" aria-hidden="true"></span> 4.0 &amp; up</label>
+          </fieldset>
+          <div class="filter-group">
+            <h3>Availability &amp; deals</h3>
+            <label class="check"><input type="checkbox" id="f-stock"> In stock only</label>
+            <label class="check"><input type="checkbox" id="f-sale"> On sale</label>
+          </div>
+        </div>
+        <div class="filters__foot">
+          <button class="btn btn--ghost" type="button" id="f-clear">Clear all</button>
+          <button class="btn btn--primary" type="button" data-close id="f-apply">Show results</button>
+        </div>
+      </aside>
+
+      <section aria-labelledby="shop-title">
+        <div class="toolbar">
+          <div class="toolbar__search field">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20.5 20.5-4.2-4.2"/></svg>
+            <label class="sr-only" for="shop-search">Search products</label>
+            <input id="shop-search" type="search" placeholder="Search in shop…" autocomplete="off">
+          </div>
+          <p class="toolbar__count" id="count" aria-live="polite"></p>
+          <button class="btn btn--ghost btn--sm filters-toggle" type="button" data-open="filters" aria-controls="drawer-filters" aria-expanded="false">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+            Filters <span id="filter-count"></span>
+          </button>
+          <div class="field">
+            <label class="sr-only" for="sort">Sort by</label>
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="newest">Newest</option>
+              <option value="popular">Most popular</option>
+              <option value="rating">Top rated</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+            </select>
+          </div>
+        </div>
+        <div class="active-filters" id="active-filters"></div>
+        <div class="grid grid--3" id="shop-grid"></div>
+        <div class="load-more" id="load-more"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

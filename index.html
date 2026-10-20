@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bloom &amp; Hobby — Ladies' Items, Special Gifts &amp; Hobby Supplies</title>
+  <meta name="description" content="Shop ladies' bags, jewellery and beauty, special gift boxes and limited editions, plus art, craft, garden and music hobby kits.">
+  <meta name="theme-color" content="#b03a6f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23b03a6f'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white'>✿</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="eyebrow">New season collection</span>
+          <h1>Lovely things for her, <em>special</em> gifts &amp; hobbies to love</h1>
+          <p class="hero__lead">From handbags and jewellery to hand-picked gift boxes and creative hobby kits — everything is chosen with care, beautifully packed and delivered fast.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="shop.html">Shop the collection <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a class="btn btn--outline" href="shop.html?cat=hobby">Explore hobbies</a>
+          </div>
+          <div class="hero__stats">
+            <div><strong>12k+</strong><span>Happy customers</span></div>
+            <div><strong>4.8★</strong><span>Average rating</span></div>
+            <div><strong>48h</strong><span>Fast dispatch</span></div>
+          </div>
+        </div>
+        <div class="hero__art" aria-hidden="true">
+          <a class="hero-tile hero-tile--tall" href="shop.html?cat=ladies" tabindex="-1" style="--a:#fbe1ea;--b:#eeb1c4"><span>👜</span><em>Ladies</em></a>
+          <a class="hero-tile" href="shop.html?cat=special" tabindex="-1" style="--a:#fbecd0;--b:#f2cd8a"><span>🎁</span><em>Special</em></a>
+          <a class="hero-tile" href="shop.html?cat=hobby" tabindex="-1" style="--a:#d9efe3;--b:#a7d7bf"><span>🧶</span><em>Hobby</em></a>
+          <div class="hero__float">
+            <span style="font-size:1.6rem">🌸</span>
+            <div><b>Loved by 12,000+</b><span class="rating"><span class="stars" style="--rating:4.8"></span> 4.8 / 5</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="section--tight">
+      <div class="container">
+        <ul class="perks" id="perks"></ul>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" aria-labelledby="cat-title">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <span class="eyebrow">Shop by category</span>
+            <h2 id="cat-title">Find exactly what you love</h2>
+          </div>
+          <a class="link-arrow" href="shop.html">View all products <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="cat-grid" id="home-categories"></div>
+      </div>
+    </section>
+
+    <!-- Featured products -->
+    <section class="section section--alt" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <span class="eyebrow">Trending now</span>
+            <h2 id="featured-title">Our favourite picks</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Product collections">
+            <button class="tab" role="tab" type="button" aria-selected="true" aria-controls="featured-grid" data-tab="featured">Featured</button>
+            <button class="tab" role="tab" type="button" aria-selected="false" aria-controls="featured-grid" data-tab="new">New arrivals</button>
+            <button class="tab" role="tab" type="button" aria-selected="false" aria-controls="featured-grid" data-tab="best">Best sellers</button>
+            <button class="tab" role="tab" type="button" aria-selected="false" aria-controls="featured-grid" data-tab="sale">On sale</button>
+          </div>
+        </div>
+        <div class="grid" id="featured-grid" role="tabpanel" aria-live="polite"></div>
+        <div class="center"><a class="btn btn--outline" href="shop.html">Shop all products</a></div>
+      </div>
+    </section>
+
+    <!-- Special items promo -->
+    <section class="section" aria-labelledby="promo-title">
+      <div class="container">
+        <div class="promo" data-reveal>
+          <div>
+            <span class="eyebrow">Special items</span>
+            <h2 id="promo-title">Gifts that feel personal</h2>
+            <p>Limited editions, personalised keepsakes and ready-to-give gift boxes — this week only, enjoy up to 20% off selected special items.</p>
+            <div class="countdown" id="countdown" aria-label="Offer ends in">
+              <div><strong data-cd="d">00</strong><span>Days</span></div>
+              <div><strong data-cd="h">00</strong><span>Hours</span></div>
+              <div><strong data-cd="m">00</strong><span>Mins</span></div>
+              <div><strong data-cd="s">00</strong><span>Secs</span></div>
+            </div>
+            <a class="btn btn--light" href="shop.html?cat=special">Shop special items</a>
+          </div>
+          <div class="promo__items" id="promo-items"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hobby corner -->
+    <section class="section section--alt" aria-labelledby="hobby-title">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <span class="eyebrow">Hobby corner</span>
+            <h2 id="hobby-title">Make time for what you love</h2>
+            <p>Beginner-friendly kits and quality supplies for painting, knitting, gardening, music and more.</p>
+          </div>
+          <a class="link-arrow" href="shop.html?cat=hobby">All hobby items <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="chips" id="hobby-chips"></div>
+        <div class="grid" id="hobby-grid"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" aria-labelledby="quotes-title">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <div>
+            <span class="eyebrow">Kind words</span>
+            <h2 id="quotes-title">What our customers say</h2>
+          </div>
+        </div>
+        <div class="quotes" id="quotes"></div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section--tight" aria-labelledby="news-title" style="padding-bottom:64px">
+      <div class="container">
+        <div class="newsletter" data-reveal>
+          <div>
+            <h2 id="news-title">Join the club, get 10% off</h2>
+            <p>Be first to hear about new arrivals, limited editions and members-only offers. No spam, ever.</p>
+          </div>
+          <form class="newsletter__form" id="newsletter-form" novalidate>
+            <div class="field">
+              <label class="sr-only" for="news-email">Email address</label>
+              <input id="news-email" name="email" type="email" placeholder="Your email address" autocomplete="email" required data-error="Please enter a valid email address.">
+            </div>
+            <button class="btn btn--primary" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
